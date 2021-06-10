@@ -32,7 +32,7 @@ export class PlayersService {
     }
 
     async deletePlayer(email: string) : Promise<any>{
-        return await this.playerModule.remove({email}).exec();
+        return await this.playerModule.deleteOne({email}).exec();
     }
 
     async searchPlayersByEmail(email: string) : Promise<Player>{
